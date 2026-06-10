@@ -32,3 +32,6 @@
   background-color: var(--color-principal);
   color: var(--fondo-blanco);
 }
+.hero {
+  background-color: greenyellow;
+}
