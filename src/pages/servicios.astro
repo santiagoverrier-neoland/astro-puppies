@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import './servicios.css'
+---
+
+<Layout>
+    <main class="container">
+        <h2 class="section-title">Nuestros Servicios Integrales</h2>
+        <p style="margin-bottom: 40px; font-size: 16px; color: #555; max-width: 800px;">
+            En Puppis Clone no solo te ofrecemos los mejores productos, sino también un ecosistema completo para garantizar la salud, higiene y felicidad de tu mascota. Contamos con profesionales altamente capacitados.
+        </p>
+        
+        <div class="services-grid">
+            <!-- Servicio 1: Veterinaria -->
+            <div class="service-card">
+                <div class="service-icon-box">🏥</div>
+                <div class="service-info">
+                    <h3>Clínica Veterinaria</h3>
+                    <p>Consultas generales, vacunación, desparasitación, cirugías programadas y análisis clínicos. Cuidamos a tu mascota con la última tecnología y todo el amor que se merece.</p>
+                    <a href="contacto.html" class="btn">Pedir Turno</a>
+                </div>
+            </div>
+
+            <!-- Servicio 2: Peluquería Canina -->
+            <div class="service-card">
+                <div class="service-icon-box">🧼</div>
+                <div class="service-info">
+                    <h3>Peluquería & Spa</h3>
+                    <p>Baños terapéuticos, cortes de raza, corte de uñas y limpieza de oídos tanto para perros como para gatos. Utilizamos productos hipoalergénicos de primera calidad.</p>
+                    <a href="contacto.html" class="btn">Agendar Spa</a>
+                </div>
+            </div>
+
+            <!-- Servicio 3: Adopción Responsable -->
+            <div class="service-card">
+                <div class="service-icon-box">🤝</div>
+                <div class="service-info">
+                    <h3>Adopción Responsable</h3>
+                    <p>Colaboramos activamente con refugios locales para ayudar a perros y gatos sin hogar a encontrar una familia amorosa. ¡Vení a conocer a tu próximo mejor amigo!</p>
+                    <a href="sobre-nosotros.html" class="btn">Saber Más</a>
+                </div>
+            </div>
+
+            <!-- Servicio 4: Planes Nutricionales -->
+            <div class="service-card">
+                <div class="service-icon-box">🧪</div>
+                <div class="service-info">
+                    <h3>Asesoramiento Nutricional</h3>
+                    <p>¿No sabés cuál es el mejor alimento para su edad o condición médica? Nuestros especialistas diseñan un plan a medida para mejorar su energía y calidad de vida.</p>
+                    <a href="contacto.html" class="btn">Consultar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner Promocional -->
+        <div class="promo-banner">
+            <h3>¿Es la primera vez que nos visitás?</h3>
+            <p>Obtené un 20% de descuento en el primer baño de tu mascota o en su consulta clínica inicial.</p>
+            <a href="contacto.html" class="btn">Contactar Ahora</a>
+        </div>
+    </main>
+</Layout>

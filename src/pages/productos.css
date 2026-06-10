@@ -1,0 +1,34 @@
+/* Estilos específicos de Filtros */
+.filter-bar {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #e2dbe6;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.filter-tags {
+  display: flex;
+  gap: 10px;
+}
+.filter-tag {
+  background-color: #f1ecf6;
+  color: #6a2a85;
+  padding: 6px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+.filter-tag:hover,
+.filter-tag.active {
+  background-color: #6a2a85;
+  color: #ffffff;
+}

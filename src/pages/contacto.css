@@ -1,0 +1,34 @@
+/* Formulario y Contacto */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 40px;
+}
+.contact-info-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #e2dbe6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #6a2a85;
+}
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e2dbe6;
+  background-color: #ffffff;
+  font-size: 15px;
+}
+.form-control:focus {
+  outline: none;
+  border-color: #6a2a85;
+}
