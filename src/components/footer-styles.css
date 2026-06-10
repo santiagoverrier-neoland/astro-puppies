@@ -1,6 +1,6 @@
 footer {
-  background-color: #2b0f38;
-  color: #ffffff;
+  background-color: var(--color-footer);
+  color: var(--fondo-blanco);
   padding: 50px 20px 20px;
   margin-top: 60px;
 }
@@ -16,7 +16,7 @@ footer {
 }
 .footer-column h4 {
   font-size: 18px;
-  color: #f29100;
+  color: var(--color-secundario);
   margin-bottom: 20px;
 }
 .footer-column ul {
@@ -32,7 +32,7 @@ footer {
   font-size: 14px;
 }
 .footer-column ul a:hover {
-  color: #ffffff;
+  color: var(--fondo-blanco);
 }
 .footer-bottom {
   max-width: 1200px;

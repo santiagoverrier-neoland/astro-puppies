@@ -1,9 +1,9 @@
 /* Estilos específicos de Filtros */
 .filter-bar {
-  background-color: #ffffff;
+  background-color: var(--fondo-blanco);
   padding: 15px 20px;
   border-radius: 12px;
-  border: 1px solid #e2dbe6;
+  border: 1px solid var(--borde-claro);
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
@@ -16,8 +16,8 @@
   gap: 10px;
 }
 .filter-tag {
-  background-color: #f1ecf6;
-  color: #6a2a85;
+  background-color: var(--fondo-claro);
+  color: var(--color-principal);
   padding: 6px 15px;
   border-radius: 20px;
   text-decoration: none;
@@ -29,6 +29,6 @@
 }
 .filter-tag:hover,
 .filter-tag.active {
-  background-color: #6a2a85;
-  color: #ffffff;
+  background-color: var(--color-principal);
+  color: var(--fondo-blanco);
 }
