@@ -1,9 +1,12 @@
 ---
-import './header-styles.css'
+import './header.css'
+
+let promo = true
+let mensaje = "🐾 ¡Envío GRATIS en compras mayores a u$s 20! 🐾"
 ---
 
 <header>
-  <div class="top-bar">🐾 ¡Envío GRATIS en compras mayores a $30.000! 🐾</div>
+  {promo ? <div class="top-bar">{mensaje}</div> : ''}
   <nav class="nav-container">
     <a href="index.html" class="logo">Puppis<span>Clone</span></a>
     <ul class="nav-menu">

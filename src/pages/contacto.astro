@@ -2,30 +2,45 @@
 import Layout from "../layouts/Layout.astro"
 
 import './contacto.css'
+
+const idioma = "es"
+
+const campos = {
+    es: {
+        nombre: "Nombre Completo",
+        correo: "Correo Electrónico",
+        mensaje: "Mensaje"
+    },
+    en: {
+        nombre: "Name",
+        correo: "E-mail",
+        mensaje: "Message"
+    }
+    
+}
+
+const tituloSeccion = "Ponete en Contacto"
 ---
 
-<Layout>
-    <div class="hero">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi necessitatibus ea voluptates ipsam quas dolorum praesentium itaque quasi omnis quis tenetur suscipit ab deserunt iure, architecto harum mollitia quod voluptatibus alias natus error. Eaque harum, voluptates reiciendis vel eligendi maxime nemo nesciunt. Aut corrupti magni illum dolores quasi deleniti quam, quibusdam similique consectetur quia illo incidunt placeat ipsa nisi, tempora ex in id ipsam sapiente minima quis aperiam assumenda quos quo? Optio autem atque impedit ullam ipsum eligendi sunt magnam? Corporis porro voluptatibus nihil nam quae? Libero aspernatur fugit voluptatibus, pariatur odio, a similique nemo mollitia explicabo sapiente iste alias?
-    </div>
+<Layout titulo="Contacto - Puppis clone">
     <main class="container">
-        <h2 class="section-title">Ponete en Contacto</h2>
+        <h2 class="section-title">{tituloSeccion}</h2>
         
         <div class="contact-grid">
             <!-- Formulario -->
             <div style="background-color: var(--fondo-blanco); padding: 30px; border-radius: 20px; border: 1px solid var(--borde-claro);">
                 <h3 style="color: var(--color-principal); margin-bottom: 20px;">Escribinos</h3>
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito (simulado)!');">
+                <form action="#">
                     <div class="form-group">
-                        <label for="nombre">Nombre Completo</label>
+                        <label for="nombre">{idioma == "es" ? campos.es.nombre : campos.en.nombre}</label>
                         <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
+                        <label for="email">{idioma == "es" ? campos.es.correo : campos.en.correo}</label>
                         <input type="email" id="email" class="form-control" placeholder="tu@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
+                        <label for="mensaje">{idioma == "es" ? campos.es.mensaje : campos.en.mensaje}</label>
                         <textarea id="mensaje" class="form-control" rows="5" placeholder="¿En qué podemos ayudarte a vos y a tu mascota?" required></textarea>
                     </div>
                     <button type="submit" class="btn">Enviar Mensaje</button>
