@@ -1,0 +1,105 @@
+---
+// configuración
+/*
+badge: boolean
+productBrand: string
+productTitle: string
+productPrice: string
+productImage: string
+badgeDiscount: number
+
+*/
+
+import Button from "./Button.astro";
+
+const {
+  badge = false,
+  badgeDiscount = 0,
+  productBrand,
+  productTitle,
+  productPrice,
+  productImage,
+  buttonUrl
+} = Astro.props;
+---
+
+<div class="product-card">
+  <div class="product-img-placeholder">
+    {productImage}
+    {badge == true ? <span class="badge">{badgeDiscount}% OFF</span> : ""}
+  </div>
+  <div class="product-info">
+    <div class="product-brand">{productBrand}</div>
+    <div class="product-title">{productTitle}</div>
+    <div class="product-price">{productPrice}</div>
+    <Button url={buttonUrl}>
+  </div>
+</div>
+
+<style>
+
+  .product-card {
+    background-color: var(--fondo-blanco);
+    border-radius: 15px;
+    border: 1px solid var(--borde-claro);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  .product-img-placeholder {
+    background-color: var(--fondo-claro);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    position: relative;
+  }
+  .badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--color-secundario);
+    color: var(--fondo-blanco);
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+  }
+  .product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .product-brand {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .product-title {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 10px;
+    height: 48px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .product-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-principal);
+    margin-top: auto;
+    margin-bottom: 15px;
+  }
+</style>

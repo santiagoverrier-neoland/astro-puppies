@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProductCard from "../components/ProductCard.astro";
 
 import './productos.css'
 ---
@@ -21,65 +22,57 @@ import './productos.css'
 
         <div class="products-grid">
             <!-- Producto 1 -->
-            <div class="product-card">
-                <div class="product-img-placeholder">🍖<span class="badge">10% OFF</span></div>
-                <div class="product-info">
-                    <div class="product-brand">Royal Canin</div>
-                    <div class="product-title">Alimento Mini Adulto para Perros - 7,5 Kg</div>
-                    <div class="product-price">$84.600</div>
-                    <a href="#" class="btn">Agregar al carrito</a>
-                </div>
-            </div>
+             <ProductCard  
+                badge={true}
+                productImage="🍖"
+                badgeDiscount={10}
+                productBrand="Royal Canin"
+                productTitle="Alimento Mini Adulto para Perros - 7,5 Kg"
+                productPrice="$84.600"
+                buttonUrl="ver-producto.html"
+            />
+
             <!-- Producto 2 -->
-            <div class="product-card">
-                <div class="product-img-placeholder">🥫</div>
-                <div class="product-info">
-                    <div class="product-brand">Pro Plan</div>
-                    <div class="product-title">Alimento Gato Adulto Pollo y Arroz - 3 Kg</div>
-                    <div class="product-price">$38.900</div>
-                    <a href="#" class="btn">Agregar al carrito</a>
-                </div>
-            </div>
+             <ProductCard  
+                productImage="🥫"
+                productBrand="Pro Plan"
+                productTitle="Alimento Gato Adulto Pollo y Arroz - 3 Kg"
+                productPrice="$38.900"
+            />
             <!-- Producto 3 -->
-            <div class="product-card">
-                <div class="product-img-placeholder">💎<span class="badge">30% 2da Unid</span></div>
-                <div class="product-info">
-                    <div class="product-brand">Puppis</div>
-                    <div class="product-title">Piedras Sanitarias Silica Gel Lavanda - 3.8 L</div>
-                    <div class="product-price">$17.000</div>
-                    <a href="#" class="btn">Agregar al carrito</a>
-                </div>
-            </div>
+             <ProductCard  
+                badge={true}
+                productImage="💎"
+                badgeDiscount={30}
+                productBrand="Puppis"
+                productTitle="Piedras Sanitarias Silica Gel Lavanda - 3.8 L"
+                productPrice="$17.000"
+            />
+
             <!-- Producto 4 -->
-            <div class="product-card">
-                <div class="product-img-placeholder">🛏️</div>
-                <div class="product-info">
-                    <div class="product-brand">Animal Pet</div>
-                    <div class="product-title">Manta Polar Soft para Perro y Gato Gris</div>
-                    <div class="product-price">$8.400</div>
-                    <a href="#" class="btn">Agregar al carrito</a>
-                </div>
-            </div>
+             <ProductCard  
+                productImage="🛏️"
+                productBrand="Animal Pet"
+                productTitle="Manta Polar Soft para Perro y Gato Gris"
+                productPrice="$8.400"
+            />
+
             <!-- Producto 5 -->
-            <div class="product-card">
-                <div class="product-img-placeholder">🥎</div>
-                <div class="product-info">
-                    <div class="product-brand">Zee.Dog</div>
-                    <div class="product-title">Pelota de Goma de Alta Resistencia</div>
-                    <div class="product-price">$9.200</div>
-                    <a href="#" class="btn">Agregar al carrito</a>
-                </div>
-            </div>
+             <ProductCard  
+                productImage="🥎"
+                productBrand="Zee.Dog"
+                productTitle="Pelota de Goma de Alta Resistencia"
+                productPrice="$9.200"
+            />
+           
             <!-- Producto 6 -->
-            <div class="product-card">
-                <div class="product-img-placeholder">🧼</div>
-                <div class="product-info">
-                    <div class="product-brand">Osspret</div>
-                    <div class="product-title">Shampoo Antialérgico para Mascotas - 250ml</div>
-                    <div class="product-price">$6.500</div>
-                    <a href="#" class="btn">Agregar al carrito</a>
-                </div>
-            </div>
+              <ProductCard  
+                productImage="🧼"
+                productBrand="Osspret"
+                productTitle="Shampoo Antialérgico para Mascotas - 250ml"
+                productPrice="$6.500"
+            />
+
         </div>
     </main>
 </Layout>
